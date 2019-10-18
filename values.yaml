@@ -10,6 +10,13 @@ global:
   # TLS for end-to-end encrypted transport
   tlsDisable: true
 
+injector:
+  enabled: true
+  image: "hashicorp/webhook:0.0.1"
+  tls:
+    caBundle: ""
+    secretName: ""
+
 server:
   # Resource requests, limits, etc. for the server cluster placement. This
   # should map directly to the value of the resources field for a PodSpec.
