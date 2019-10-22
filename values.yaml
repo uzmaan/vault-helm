@@ -232,9 +232,8 @@ server:
     disruptionBudget:
       enabled: true
 
-    # maxUnavailable will default to (n/2)-1 where n is the number of
-    # replicas. If you'd like a custom value, you can specify an override here.
-      maxUnavailable: null
+      # maxUnavailable pods (this should be (n/2)-1)
+      maxUnavailable: 1
 
   # Definition of the serviceaccount used to run Vault.
   serviceaccount:
